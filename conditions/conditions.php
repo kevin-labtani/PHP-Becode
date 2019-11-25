@@ -153,13 +153,5 @@ if(isset($_GET['team'])){
 			<input type="radio" name="gender" value="female"> Female<br>
 			<input type="submit" name="team" value="submit">
 		</form>
-
-
-		<h3><?php echo $gradeMessage; ?></h3>
-		<form action="conditions.php" method="GET">
-			<label for="grade">Please type in your grade:</label>
-      <input type="text" name="grade" value=""><br>
-			<input type="submit" name="gradation" value="submit">
-		</form>
 </body>
 </html>
