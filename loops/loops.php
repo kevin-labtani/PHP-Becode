@@ -71,9 +71,10 @@ $countries = array("BE" => "Belgium","DK" => "Denmark","DE" => "Germany","IE" =>
 </head>
 <body>
   <select>
-    <?php foreach ($countries as $key => $value) { ?>
-      <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
-    <?php } ?>
+    <?php foreach ($countries as $key => $value) {
+      echo "<option value=$key>$value</option>";
+    } 
+    ?>
   </select>
 </body>
 </html>
