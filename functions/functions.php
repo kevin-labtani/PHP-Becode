@@ -115,7 +115,7 @@ echo '<hr>';
 // echo 'The volume of a cone which ray is 3 and height is 4 = ' . $volume . ' cm<sup>3</sup><br />';  
 function cone($ray, $height){
   $vol = $ray * $ray * M_PI * $height * (1/3);
-  return  "The volume of a cone with a radius of 5 and a height of 2 is equal to $vol cm<sup>3</sup><br />";
+  return  "The volume of a cone with a radius of $ray and a height of $height is equal to $vol cm<sup>3</sup><br />";
 }
 
 echo cone(5, 2) . "<br/>";
