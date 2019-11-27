@@ -131,7 +131,7 @@ function generateWord($length){
 
 <!DOCTYPE html>
 <head>
-  <title>random words generator</title>
+  <title>random words generator< /title>
 </head>
 <body>
   <h3>Generate a new word.</h3>
