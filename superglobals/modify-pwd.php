@@ -14,22 +14,23 @@
     }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cookie</title>
-</head>
-<body>
-    <form action="modify-pwd.php" method="POST">
-        New Login: <input type="text" name="login"><br>
-        New Password: <input type="password" name="password"><br>
-        <input type="submit" name="submit" value="submit">
-        <p>your current login is: <?php echo $login; ?></p>
-        <p>your current password is: <?php echo $password; ?></p>
-    </form>
+
+    <?php include 'templates/header.php'; ?>
+    <section class="container indigo-text">
+        <form action="modify-pwd.php" method="POST" class="white">
+            <label for="login">New Login:</label>
+            <input type="text" name="login">
+            <label for="password">New Password:</label>
+            <input type="password" name="password"><br>
+            <div class="center">
+                <input type="submit" name="submit" value="submit" class="btn">
+            </div>
+            <p>your current login is: <?php echo $login; ?></p>
+            <p>your current password is: <?php echo $password; ?></p>
+        </form>
+    </section>
+
 </body>
 </html>

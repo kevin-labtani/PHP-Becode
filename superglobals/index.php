@@ -28,24 +28,25 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP - Variables superglobales, sessions et cookies</title>
-</head>
-<body>
-    <p>your user agent is: <?php echo $usrAgent; ?></p>
-    <p>your ip is: <?php echo $usrIp; ?></p>
-    <p>the server name is: <?php echo $srvrName; ?></p>
-    <a href="session.php">Session Page</a>
-    <hr>
-    <form action="index.php" method="POST">
-        Login: <input type="text" name="login"><br>
-        Password: <input type="password" name="password"><br>
-        <input type="submit" name="submit" value="submit">
-    </form>
-    <a href="modify-pwd.php">Modify login information</a>
+
+    <?php include 'templates/header.php'; ?>
+    <section class="container indigo-text">
+        <p class="center">your user agent is: <?php echo $usrAgent; ?></p>
+        <p class="center">your ip is: <?php echo $usrIp; ?></p>
+        <p class="center">the server name is: <?php echo $srvrName; ?></p>
+        <a href="session.php" class="btn btn-small indigo">Session Page</a>
+        <hr>
+        <form action="index.php" method="POST" class="white">
+            <label for="login">Login:</label>
+            <input type="text" name="login">
+            <label for="password">Password:</label>
+            <input type="password" name="password"><br>
+            <div class="center">
+                <input type="submit" name="submit" value="submit" class="btn">
+            </div>
+        </form>
+        <a href="modify-pwd.php" class="btn btn-small indigo">Modify login information</a>
+    </section>
 
 </body>
 </html>

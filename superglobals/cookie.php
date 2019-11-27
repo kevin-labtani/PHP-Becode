@@ -4,18 +4,14 @@
     $password = $_COOKIE['password'] ?? 'Unknown';
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cookie</title>
-</head>
-<body>
-    <p>your login is: <?php echo $login; ?></p>
-    <p>your password is: <?php echo $password; ?></p>
-    <a href="index.php">Go back home</a>
+
+    <?php include 'templates/header.php'; ?>
+    <section class="container indigo-text">
+        <p>your login is: <?php echo $login; ?></p>
+        <p>your password is: <?php echo $password; ?></p>
+        <a href="index.php" class="btn btn-small indigo">Go back home</a>
+    </section>
 </body>
 </html>
