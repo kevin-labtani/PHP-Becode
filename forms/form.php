@@ -21,6 +21,9 @@
         <div class="file-path-wrapper">
             <input class="file-path" type="text">
         </div>
+        <div class="red-text">
+            <?php echo $errors['extension']; ?>
+        </div>
     </div>
     <div class="input-field center">
         <button class="btn-large pink white-text" type="submit" name="submit" value="submit">Submit</button>

@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $fileNameCmps = explode('.', $fileName);
     $fileExtension = strtolower(end($fileNameCmps));
 
-    if ('pdf' != $fileExtension) {
+    if ('' != $_FILES['uploadedFile']['tmp_name'] && 'pdf' != $fileExtension) {
         $errors['extension'] = 'We only accept PDF files<br/>';
     }
 }
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         <div class="row">
             <div class="col s12 m6 offset-m3">
                 <?php
-                    if (empty($_POST['firstName']) || empty($_POST['lastName'])) {
+                    if (empty($_POST['firstName']) || empty($_POST['lastName']) || '' == $_FILES['uploadedFile']['tmp_name'] || 'pdf' != $fileExtension) {
                         include 'form.php';
                     } else {
                         include 'result.php';
