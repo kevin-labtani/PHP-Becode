@@ -1,11 +1,4 @@
 <?php
-    if (isset($_POST['submit'])) {
-        session_start();
-
-        $_SESSION['title'] = $_POST['title'];
-        $_SESSION['firstName'] = $_POST['firstName'];
-        $_SESSION['lastName'] = $_POST['lastName'];
-    }
 ?>
 
 <!DOCTYPE html>
@@ -25,12 +18,17 @@
     <div class="container section">
         <div class="row">
             <div class="col s12 m6 offset-m3">
-                <?php include 'form.php'; ?>
                 <?php
-                session_start();
-                print_r($_SESSION);
+                    if (empty($_POST['firstName']) || empty($_POST['lastName'])) {
+                        include 'form.php';
+                    } else {
+                        echo '<h5 class="pink-text center-align">'.$_POST['title'].' '.$_POST['firstName'].' '.$_POST['lastName'].'</h5>';
+                        echo '
+                        <div class="center">
+                            <a href="index.php" class="btn btn-small pink center">Back to the form</a>
+                        </div>';
+                    }
                 ?>
-
             </div>
         </div>
     </div>
