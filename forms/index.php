@@ -1,4 +1,26 @@
 <?php
+
+if (isset($_POST['submit'])) {
+    // get from details
+    $title = $_POST['title'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+
+    // get details of the uploaded file
+    $fileTmpPath = $_FILES['uploadedFile']['tmp_name'];
+    $fileName = $_FILES['uploadedFile']['name'];
+    $fileSize = $_FILES['uploadedFile']['size'];
+    $fileType = $_FILES['uploadedFile']['type'];
+    $fileNameCmps = explode('.', $fileName);
+    $fileExtension = strtolower(end($fileNameCmps));
+
+    // echo $fileTmpPath.'<br/>';
+    // echo $fileName.'<br/>';
+    // echo $fileSize.'<br/>';
+    // echo $fileType.'<br/>';
+    // echo $fileExtension.'<br/>';
+}
+
 ?>
 
 <!DOCTYPE html>
