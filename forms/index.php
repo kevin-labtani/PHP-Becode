@@ -1,4 +1,5 @@
 <?php
+$errors = ['extension' => ''];
 
 if (isset($_POST['submit'])) {
     // get from details
@@ -14,11 +15,9 @@ if (isset($_POST['submit'])) {
     $fileNameCmps = explode('.', $fileName);
     $fileExtension = strtolower(end($fileNameCmps));
 
-    // echo $fileTmpPath.'<br/>';
-    // echo $fileName.'<br/>';
-    // echo $fileSize.'<br/>';
-    // echo $fileType.'<br/>';
-    // echo $fileExtension.'<br/>';
+    if ('pdf' != $fileExtension) {
+        $errors['extension'] = 'We only accept PDF files<br/>';
+    }
 }
 
 ?>

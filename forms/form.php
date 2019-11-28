@@ -12,13 +12,14 @@
     <div class="input-field">
         <input type="text" name="lastName" id="lastName" />
         <label for="lastName">Last Name</label>
+    </div>
     <div class="file-field input-field">
         <div class="btn">
             <span>Upload</span>
             <input type="file" name="uploadedFile">
         </div>
         <div class="file-path-wrapper">
-            <input class="file-path validate" type="text">
+            <input class="file-path" type="text">
         </div>
     </div>
     <div class="input-field center">
