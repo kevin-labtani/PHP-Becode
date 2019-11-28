@@ -6,11 +6,11 @@
         <option value="Ms">Ms</option>
     </select>
     <div class="input-field">
-        <input type="text" name="firstName" id="firstName" />
+        <input type="text" name="firstName" id="firstName" value="<?php echo htmlspecialchars($firstName); ?>"/>
         <label for="firstName">First Name</label>
     </div>
     <div class="input-field">
-        <input type="text" name="lastName" id="lastName" />
+        <input type="text" name="lastName" id="lastName" value="<?php echo htmlspecialchars($lastName); ?>"/>
         <label for="lastName">Last Name</label>
     </div>
     <div class="file-field input-field">

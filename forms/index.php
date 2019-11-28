@@ -1,5 +1,6 @@
 <?php
 $errors = ['extension' => ''];
+$title = $firstName = $lastName = '';
 
 if (isset($_POST['submit'])) {
     // get from details
