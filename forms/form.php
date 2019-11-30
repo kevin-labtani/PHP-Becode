@@ -1,10 +1,12 @@
 <form action="index.php" method="POST" enctype="multipart/form-data">
-    <label for="title">Choose a title:</label>
-    <select name="title" id="title" class="browser-default">
-        <option value="Mr">Mr</option>
-        <option value="Mrs">Mrs</option>
-        <option value="Ms">Ms</option>
-    </select>
+    <div class="input-field">
+        <select name="title" id="title">
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Ms">Ms</option>
+        </select>
+        <label for="title">Choose a title:</label>
+    </div>
     <div class="input-field">
         <input type="text" name="firstName" id="firstName" value="<?php echo htmlspecialchars($firstName); ?>"/>
         <label for="firstName">First Name</label>
