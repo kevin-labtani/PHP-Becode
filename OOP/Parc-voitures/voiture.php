@@ -2,13 +2,13 @@
 
     class Voiture
     {
-        public $immatriculation;
-        public $circulation;
-        public $kilométrage;
-        public $modèle;
-        public $marque;
         public $couleur;
         public $poids;
+        public $kilométrage;
+        private $circulation;
+        private $immatriculation;
+        private $modèle;
+        private $marque;
 
         public function __construct($immatriculation, $circulation, $kilométrage, $modèle, $marque, $couleur, $poids)
         {
@@ -70,5 +70,27 @@
             $annéeVoiture = end($annéeVoitureArr);
 
             return $currentYear - $annéeVoiture;
+        }
+
+        public function rouler()
+        {
+            $this->kilométrage += 100000;
+
+            return 'La voiture avance de 100 000 km';
+        }
+
+        public function displayCar()
+        {
+            return '
+                <tr>
+                    <td>'.$this->immatriculation.'</td>
+                    <td>'.$this->circulation.'</td>
+                    <td>'.$this->kilométrage.'</td>
+                    <td>'.$this->modèle.'</td>
+                    <td>'.$this->marque.'</td>
+                    <td>'.$this->couleur.'</td>
+                    <td>'.$this->poids.'</td>
+                </tr>
+            ';
         }
     }
